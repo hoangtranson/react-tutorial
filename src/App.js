@@ -6,6 +6,7 @@ import EffectTutorial from "./components/useEffect";
 import RefTutorial from "./components/useRef";
 import LayoutEffectTutorial from "./components/useLayoutEffect";
 import ImpreativeHandle from "./components/useImperativeHandle";
+import ContextTutorial from "./components/contextTutorial";
 
 function App() {
 
@@ -16,7 +17,8 @@ function App() {
       {/* <EffectTutorial></EffectTutorial> */}
       {/* <RefTutorial /> */}
       {/* <LayoutEffectTutorial /> */}
-      <ImpreativeHandle />
+      {/* <ImpreativeHandle /> */}
+      <ContextTutorial />
     </div>
   );
 }

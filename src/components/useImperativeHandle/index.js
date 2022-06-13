@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Button from "./button";
+import Button from "./Button";
 
 const ImpreativeHandle = () => {
     const btnRef = useRef(null);
