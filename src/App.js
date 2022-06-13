@@ -1,14 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
-import StateTutorial from "./components/state-tutorial";
-import ReducerTutorial from "./components/reducer-tutorial";
-import EffectTutorial from "./components/affect-tutorial";
-import RefTutorial from "./components/ref-tutorial";
-import LayoutEffectTutorial from "./components/layout-effect-tutorial";
-import ImpreativeHandle from "./components/imperative-handle";
+import StateTutorial from "./components/useState";
+import ReducerTutorial from "./components/useReducer";
+import EffectTutorial from "./components/useEffect";
+import RefTutorial from "./components/useRef";
+import LayoutEffectTutorial from "./components/useLayoutEffect";
+import ImpreativeHandle from "./components/useImperativeHandle";
 
 function App() {
-  const Welcome = (props) => <h1>Welcome to {props.name}</h1>;
 
   return (
     <div className="App">
