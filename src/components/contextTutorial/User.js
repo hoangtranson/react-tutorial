@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from ".";
 
-const User = ({username}) => {
-
-    return (
-        <>
-            <h1>User name: {username ?? 'N/A'}</h1>
-            
-        </>
-    )
-}
+function User(){
+  const ctx = useContext(UserContext);
+  return (
+    <>
+      <h1>User name: {ctx.userName}</h1>
+    </>
+  );
+};
 
 export default User;

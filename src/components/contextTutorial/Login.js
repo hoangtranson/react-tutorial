@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from ".";
 
-const Login = ({setUserName}) => {
+function Login() {
+  const ctx = useContext(UserContext);
 
-    return (
-        <>
-            <input onChange={ event => {
-                setUserName(event.target.value)
-            }} style={ {width: 300, height: 30}}  placeholder="Input User Name..."/>
-            
-        </>
-    )
-}
+  return (
+    <>
+      <input
+        onChange={(event) => {
+            ctx.setUserName(event.target.value);
+        }}
+        style={{ width: 300, height: 30 }}
+        placeholder="Input User Name..."
+      />
+    </>
+  );
+};
 
 export default Login;

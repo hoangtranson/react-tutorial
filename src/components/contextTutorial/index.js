@@ -1,17 +1,19 @@
-import { useState } from "react";
+import React, { useState, createContext } from "react";
 import Login from "./Login";
 import User from "./User";
 
-const ContextTutorial = () => {
-    const [username, setUsername] = useState("");
+export const UserContext = createContext();
 
-    return (
-        <>
-            <h1>Context Tutorial</h1>
-            <Login setUserName={setUsername}/>
-            <User username={username}/>
-        </>
-    )
-}
+function ContextTutorial(){
+  const [userName, setUserName] = useState("");
+
+  return (
+    <UserContext.Provider value={ {userName, setUserName } }>
+      <h1>Context Tutorial</h1>
+      <Login />
+      <User />
+    </UserContext.Provider>
+  );
+};
 
 export default ContextTutorial;
