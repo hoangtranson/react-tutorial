@@ -8,8 +8,10 @@ function Layout() {
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>
       </div>
-      
-      <Outlet />
+
+      <div className="flex gap-5 justify-center flex-wrap">
+        <Outlet />
+      </div>
     </div>
   );
 }
