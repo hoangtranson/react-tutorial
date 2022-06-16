@@ -1,11 +1,41 @@
+import { Routes, Route, useLocation } from "react-router-dom";
+import Layout from "./components/shared/Layout";
 import "./App.css";
+import Landing from "./pages/external/Landing";
+import Login from "./pages/external/Login";
+import JobDetail from "./pages/internal/JobDetail";
+import JobManagement from "./pages/internal/Job";
 
 function App() {
+
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-      <p className="text-3xl text-gray-700 font-bold mb-5">Welcome!</p>
-      <p className="text-gray-500 text-lg">React and Tailwind CSS in action</p>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Landing />} />
+          {/* <Route path="job/:id" element={<JobDetail />} /> */}
+          <Route path="login" element={<Login />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
+      { true ? (
+        <Routes>
+          <Route path="/jobs" element={<JobManagement />}></Route>
+          <Route path="/job/:id" element={<JobDetail />}></Route>
+        </Routes>
+      ) : (
+        <Routes>
+          {/* <Route path="/job/:id" element={<LoginModal />}></Route> */}
+        </Routes>
+      )}
+    </>
   );
 }
 
