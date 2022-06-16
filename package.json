@@ -16,7 +16,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "commit": "git cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +45,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.2.0",
     "autoprefixer": "^10.4.7",
+    "git-cz": "^4.9.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.3"
   }
