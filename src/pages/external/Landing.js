@@ -28,6 +28,7 @@ function Landing() {
                 src={job.avatar}
               />
             }
+            key={job.id}
           >
             <Meta title={job.candidate} description={job.email} />
           </Card>
