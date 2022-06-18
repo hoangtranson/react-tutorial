@@ -4,23 +4,23 @@ import Auth from "./auth.service";
 const AuthContext = React.createContext(null);
 
 const AuthProvider = ({ children }) => {
-  let [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
-  let signin = (user, callback) => {
-    return Auth.signin(() => {
+  const login = (user, callback) => {
+    return Auth.login(() => {
       setUser(user);
       callback();
     });
   };
 
-  let signout = (callback) => {
-    return Auth.signout(() => {
+  const logout = (callback) => {
+    return Auth.logout(() => {
       setUser(user);
       callback();
     });
   };
 
-  let value = { user, signin, signout };
+  const value = { user, login, logout };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
