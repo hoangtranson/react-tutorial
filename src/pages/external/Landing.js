@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 import JobService from "../../api/job.service";
 
 const { Meta } = Card;
@@ -19,19 +20,15 @@ function Landing() {
     <>
       {jobs.map((job) => {
         return (
-          <Card
-            hoverable
-            style={{ width: 240 }}
-            cover={
-              <img
-                alt={job.candidate}
-                src={job.avatar}
-              />
-            }
-            key={job.id}
-          >
-            <Meta title={job.candidate} description={job.email} />
-          </Card>
+          <Link to={"/job/" + job.id} key={job.id}>
+            <Card
+              hoverable
+              style={{ width: 240 }}
+              cover={<img alt={job.title} src={job.coverImage} />}
+            >
+              <Meta title={job.title} description={job.email} />
+            </Card>
+          </Link>
         );
       })}
     </>
