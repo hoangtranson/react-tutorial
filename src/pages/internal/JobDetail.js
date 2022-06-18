@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Image } from 'antd';
-import JobService from "../../api/job.service";
+import {getJob} from "../../api/job.service";
 
 const JobDetail = () => {
   const [job, setJob] = useState();
@@ -9,7 +9,7 @@ const JobDetail = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const data = await JobService.getJob(id);
+      const data = await getJob(id);
       setJob(data);
     };
     fetch();

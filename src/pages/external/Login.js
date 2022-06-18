@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 
 const Login = ({ onLogin }) => {

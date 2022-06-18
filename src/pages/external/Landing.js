@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "antd";
 import { Link } from "react-router-dom";
-import JobService from "../../api/job.service";
+import { getJobs } from "../../api/job.service";
 
 const { Meta } = Card;
 
@@ -10,7 +10,7 @@ function Landing() {
 
   useEffect(() => {
     const fetch = async () => {
-      const data = await JobService.getJobs();
+      const data = await getJobs();
       setJobs(data);
     };
     fetch();

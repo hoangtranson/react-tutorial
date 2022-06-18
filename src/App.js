@@ -7,8 +7,6 @@ import Login from "./pages/external/Login";
 import JobDetail from "./pages/internal/JobDetail";
 import { AuthContext } from "./context/auth";
 
-import "antd/dist/antd.css";
-
 function App() {
   const auth = useContext(AuthContext);
 

@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/auth";
 
+import "antd/dist/antd.min.css";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

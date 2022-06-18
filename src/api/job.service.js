@@ -34,6 +34,6 @@ async function getJob(id) {
   });
   await promise;
 
-  return JOBS.find((job) => job.id == (id + 1));
+  return JOBS.find((job) => job.id === (id + 1));
 }
-export default { getJobs, getJob };
+export { getJobs, getJob };
